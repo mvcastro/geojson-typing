@@ -1,4 +1,4 @@
-from typing import Any, Literal, Union
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -23,7 +23,7 @@ class MultiPolygon(BaseModel):
     coordinates: MultiPolygonCoords
 
 
-Geometry = Union[Point, MultiPolygon]
+type Geometry = Point | MultiPolygon
 
 
 class Feature(BaseModel):
